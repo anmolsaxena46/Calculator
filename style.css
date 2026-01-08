@@ -1,0 +1,92 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Calculator Container */
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    background-color: #333;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Screen */
+.calculator-screen {
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    pointer-events: none; /* Disallow typing directly on screen */
+}
+
+/* Key Container */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+/* Buttons */
+button {
+    height: 60px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.1s;
+}
+
+button:hover {
+    background-color: #eee;
+}
+
+/* Specific Button Styles */
+.operator {
+    background-color: #f69906;
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: #e58805;
+}
+
+.equal-sign {
+    grid-column: 4 / 5; /* Span the 4th column */
+    grid-row: 4 / 6;    /* Span rows 4 and 5 for a taller button */
+    background-color: #2f9a1f;
+    height: 130px; /* Adjust height to fill the space */
+}
+
+.equal-sign:hover {
+    background-color: #28801b;
+}
+
+.clear {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #c82333;
+}
